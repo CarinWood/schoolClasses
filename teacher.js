@@ -3,6 +3,9 @@ class Teacher {
         this.name = name
         this.subjects = []
     }
+    addSubject(subject) {
+        this.subjects.push(subject)
+    }
 }
 
 export default Teacher

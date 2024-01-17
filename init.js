@@ -30,4 +30,7 @@ disneySchool.students.push(mickey)
 disneySchool.students.push(pluto)
 disneySchool.students.push(goofy)
 
+disneySchool.teachers.push(joakim)
+disneySchool.teachers.push(daisy)
+
 export { disneySchool, math, swedish, music, donald, minnie, mickey, pluto, goofy, joakim, daisy }
