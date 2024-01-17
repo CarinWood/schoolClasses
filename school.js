@@ -1,10 +1,13 @@
 class School {
-    constructor(name) {
+    constructor(name, address, zipcode, city) {
         this.name = name
         this.students = []
         this.teachers = []
-        this.address
-        this.zipcode
-        this.city
+        this.address = address
+        this.zipcode = zipcode
+        this.city = city
     }
 }
+
+
+export default School

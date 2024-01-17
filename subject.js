@@ -5,3 +5,5 @@ class Subject {
         this.students = []
     }
 }
+
+export default Subject

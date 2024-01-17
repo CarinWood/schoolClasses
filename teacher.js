@@ -4,3 +4,5 @@ class Teacher {
         this.subjects = []
     }
 }
+
+export default Teacher
