@@ -7,6 +7,10 @@ class School {
         this.zipcode = zipcode
         this.city = city
     }
+    relegateStudent(student) {
+        let index = this.students.indexOf(student)
+        this.students.splice(index, 1)
+    }
 }
 
 

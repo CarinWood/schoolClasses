@@ -35,7 +35,14 @@ import { disneySchool, math, swedish, music, donald, minnie, mickey, pluto, goof
 
     function studentQuitsSubject(student, subject) {
         student.quitSubject(subject)
-        subject.quitStudent(student)
+        subject.removeStudent(student)
+    }
+
+    function relegateStudent(student) {
+        disneySchool.relegateStudent(student)
+        student.subjects.forEach(subject => {
+            subject.removeStudent(student)
+        })
     }
 
      function inspectTeacher(teacher) {
@@ -67,6 +74,17 @@ addSubjectToStudent(pluto, music)
 addSubjectToStudent(goofy, swedish)
 addSubjectToStudent(goofy, music)
 
-inspectSubject(swedish)
+/* Goofy quits swedish: */
+
+/* inspectSubject(swedish)
 studentQuitsSubject(goofy, swedish)
+inspectSubject(swedish)
+ */
+
+/* Relegate goofy: */
+
+ console.log("Swedish students before relegate Goofy:")
+ inspectSubject(swedish)
+relegateStudent(goofy)
+console.log("Swedish students after relegate Goofy:")
 inspectSubject(swedish)

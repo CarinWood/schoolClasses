@@ -10,7 +10,7 @@ class Subject {
     addStudent(student) {
         this.students.push(student)
     }
-    quitStudent(student) {
+    removeStudent(student) {
         let index = this.students.indexOf(student)
         this.students.splice(index, 1)
     }
