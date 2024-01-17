@@ -10,6 +10,10 @@ class Subject {
     addStudent(student) {
         this.students.push(student)
     }
+    quitStudent(student) {
+        let index = this.students.indexOf(student)
+        this.students.splice(index, 1)
+    }
 }
 
 export default Subject

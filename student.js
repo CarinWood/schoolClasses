@@ -8,6 +8,10 @@ class Student {
     addSubject(subject) {
         this.subjects.push(subject)
     }
+    quitSubject(subject) {
+        let index = this.subjects.indexOf(subject)
+        this.subjects.splice(index, 1)
+    }
 }
 
 export default Student

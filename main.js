@@ -33,11 +33,25 @@ import { disneySchool, math, swedish, music, donald, minnie, mickey, pluto, goof
         subject.addStudent(student)
     }
 
+    function studentQuitsSubject(student, subject) {
+        student.quitSubject(subject)
+        subject.quitStudent(student)
+    }
+
      function inspectTeacher(teacher) {
         console.log("Teacher: " + teacher.name)
         teacher.subjects.forEach(subject => {
             console.log("Subject: " + subject.name)
     });
+    }
+
+    function inspectSubject(subject) {
+        console.log("Subject: " + subject.name)
+        let num = 1
+        subject.students.forEach(student => {
+            console.log("Student: " + num + ". " + student.name)
+            num++
+        })
     }
 
 addSubjectToTeacher(math, joakim)
@@ -53,4 +67,6 @@ addSubjectToStudent(pluto, music)
 addSubjectToStudent(goofy, swedish)
 addSubjectToStudent(goofy, music)
 
-displayAllStudents()
+inspectSubject(swedish)
+studentQuitsSubject(goofy, swedish)
+inspectSubject(swedish)
