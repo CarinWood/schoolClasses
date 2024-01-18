@@ -45,6 +45,13 @@ import { disneySchool, math, swedish, music, donald, minnie, mickey, pluto, goof
         })
     }
 
+    function fireTeacher(teacher) {
+        disneySchool.fireTeacher(teacher)
+        teacher.subjects.forEach(subject => {
+            subject.removeTeacher(teacher)
+        })
+    }
+
      function inspectTeacher(teacher) {
         console.log("Teacher: " + teacher.name)
         teacher.subjects.forEach(subject => {
@@ -59,6 +66,17 @@ import { disneySchool, math, swedish, music, donald, minnie, mickey, pluto, goof
             console.log("Student: " + num + ". " + student.name)
             num++
         })
+        console.log("Teacher: " + subject.teacher.name)
+    }
+
+    function inspectStudent(student) {
+        console.log("Name: " + student.name)
+        console.log("Age: " + student.age)
+        console.log("Gender: " + student.gender)
+        console.log("Subjects: ")
+        student.subjects.forEach(subject => {
+            console.log("*" + subject.name)
+        });
     }
 
 addSubjectToTeacher(math, joakim)
@@ -74,17 +92,36 @@ addSubjectToStudent(pluto, music)
 addSubjectToStudent(goofy, swedish)
 addSubjectToStudent(goofy, music)
 
-/* Goofy quits swedish: */
+/* inspect a teacher */
+/* inspectTeacher(daisy) */
 
-/* inspectSubject(swedish)
-studentQuitsSubject(goofy, swedish)
-inspectSubject(swedish)
- */
+/* inspect a student */
+/* inspectStudent(mickey) */
+
+/* Goofy quits swedish: */
+/*     console.log("Goofy before quitting swedish: ")
+    inspectStudent(goofy)
+    studentQuitsSubject(goofy, swedish)
+    console.log("********************")
+    console.log("Goofy AFTER quitting swedish: ")
+    inspectStudent(goofy) */
+
 
 /* Relegate goofy: */
 
- console.log("Swedish students before relegate Goofy:")
- inspectSubject(swedish)
+/* console.log("students before relegate Goofy:")
+console.log("Total students in school: " + disneySchool.students.length)
 relegateStudent(goofy)
-console.log("Swedish students after relegate Goofy:")
-inspectSubject(swedish)
+console.log("**************************'")
+console.log("students AFTER relegate Goofy:")
+console.log("Total students in school: " + disneySchool.students.length)  */
+
+/* Fire Joakim: */
+
+/*  console.log("All teachers in school before fireing joakim: ")
+displayAllTeachers()
+inspectSubject(math)
+fireTeacher(joakim)
+console.log("All teachers in school after fireing joakim: ")
+displayAllTeachers()
+inspectSubject(math)  */

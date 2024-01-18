@@ -11,6 +11,10 @@ class School {
         let index = this.students.indexOf(student)
         this.students.splice(index, 1)
     }
+    fireTeacher(teacher) {
+        let index = this.teachers.indexOf(teacher)
+        this.teachers.splice(index, 1)
+    }
 }
 
 

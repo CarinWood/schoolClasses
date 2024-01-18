@@ -14,6 +14,11 @@ class Subject {
         let index = this.students.indexOf(student)
         this.students.splice(index, 1)
     }
+    removeTeacher(teacher) {
+        if(this.teacher === teacher) {
+            this.teacher = {}
+        }
+    }
 }
 
 export default Subject
